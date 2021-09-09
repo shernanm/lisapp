@@ -5,6 +5,6 @@ import 'firebase/auth';
 const provider = new firebase.auth.GoogleAuthProvider();
 
 export default {
-  login: () => firebase.auth().signInWithPopup(provider),
+  login: () => firebase.auth().signInWithRedirect(provider),
   logout: () => firebase.auth().signOut()
 };
