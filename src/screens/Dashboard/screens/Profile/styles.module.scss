@@ -1,0 +1,46 @@
+.photo-profile {
+  border: 1px solid #CCC;
+  border-radius: 50%;
+  display: block;
+  margin: 50px auto 20px;
+  width: 200px;
+}
+
+.profile-container {
+  display: block;
+}
+
+
+.display-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px auto 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.email {
+  font-size: 16px;
+  margin: 5px auto;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.logout {
+  background-color: #FFFF;
+  border: 1px solid #CCCC;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #717171;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  width: 60%;
+
+  &:active,
+  &:hover {
+    background-color: #FFF;
+  }
+}

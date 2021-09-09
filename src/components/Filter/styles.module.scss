@@ -1,0 +1,37 @@
+@import '../../scss/animations';
+
+.container {
+  align-items: center;
+  background-color: #FFF;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  @include appear-animation();
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.item {
+  background-color: #FFF;
+  border: none;
+  cursor: initial;
+  padding: 0.8rem 1rem;
+  position: relative;
+  width: 100%;
+
+  &:active {
+    background-color: #EEE;
+    outline: 0;
+  }
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}

@@ -1,0 +1,23 @@
+.box {
+  bottom: var(--case-detail-initial-bottom);
+  left: var(--case-detail-initial-left);
+  position: absolute;
+  top: var(--case-detail-initial-top);
+  width: var(--case-detail-initial-width);;
+}
+
+.case-study.animated {
+  overflow: hidden;
+  position: fixed;
+  transition: left  250ms, width 250ms, bottom 350ms, top 350ms;
+  will-change: left, top, bottom;
+}
+
+.case-study {
+  bottom: 60px;
+  left: 0;
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  z-index: 3;
+}

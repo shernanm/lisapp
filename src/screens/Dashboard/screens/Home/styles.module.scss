@@ -1,30 +1,34 @@
+@import '../../../../scss/colors';
+
 .app {
   text-align: center;
 }
 
 .app-logo {
   animation: app-logo-spin infinite 20s linear;
-  height: 30vmin;
+  color: #828282;
+  height: 40vmin;
+  margin-bottom: 40px;
 }
 
 .app-header {
+  align-items: center;
   background-color: #282C34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .text {
+  color: #FFF;
   font-size: calc(10px + 2vmin);
   margin-bottom: calc(30px + 2vmin);
-  color: #FFF;
 }
 
 .app-link {
-  font-size: calc(10px + 2vmin);
   color: #61DAFB;
+  font-size: calc(10px + 2vmin);
   text-decoration: underline;
 }
 
@@ -35,5 +39,18 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+.items-container {
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: 100%;
+  margin: 0rem 1rem 4rem 1rem;
+  overflow-y: auto;
+  width: calc(100% - 2rem);
+
+  & article:last-child {
+    margin-bottom: 20px;
   }
 }

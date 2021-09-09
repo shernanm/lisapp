@@ -1,0 +1,23 @@
+@import 'src/scss/colors';
+$red-error: $red;
+$background-error: $pink;
+
+.container {
+  align-items: center;
+  background-color: $background-error;
+  border: 1px solid lighten($color: $red-error, $amount: 10);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 1rem;
+}
+
+.error-img {
+  fill: $red-error;
+}
+
+.error {
+  color: $red-error;
+  margin-left: 10px;
+}

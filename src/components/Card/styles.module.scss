@@ -1,0 +1,140 @@
+@import '../../scss/colors';
+
+.article {
+  border: 1px solid #EEE;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+
+  img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.title {
+  color: #2A3B47;
+}
+
+.content {
+  padding: 1rem;
+
+  p {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-align: left;
+  }
+}
+
+.footer-item {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.expand {
+  &.article {
+    border: none;
+    border-radius: 0;
+  }
+
+  .img-container {
+    padding-bottom: 100%;
+    transition: padding-bottom 0.3s;
+    will-change: contents;
+
+    &::before {
+      background: #DDD;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    img {
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0rem;
+    }
+  }
+
+  .content {
+    margin-bottom: 20px;
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      -webkit-line-clamp: initial;
+    }
+  }
+
+  .footer-item {
+    align-items: flex-start;
+    background-color: #FFF;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .finded {
+      display: flex;
+      position: absolute;
+      right: 11%;
+      top: -150%;
+
+      &::before {
+        position: absolute;
+        right: -20px;
+      }
+    }
+  }
+
+  .titleExpand {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.state-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
