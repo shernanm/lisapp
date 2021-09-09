@@ -1,26 +1,31 @@
-import { StrictMode } from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { render } from 'react-dom';
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { Provider } from 'react-redux';
+import { ApolloProvider } from '@apollo/react-hooks';
 
-import 'scss/application.scss';
+import store from './redux/store';
+import App from './components/App';
+import './config/i18n';
+import { init } from './config';
+import './scss/application.scss';
+import { register } from './serviceWorker';
 
-import 'config/i18n';
-import App from 'components/App';
+init();
+const client = new ApolloClient({
+  // uri: 'http://localhost:8080/',
+  uri: 'https://lisapp-back.herokuapp.com/',
+  cache: new InMemoryCache()
+});
 
-import reportWebVitals from './reportWebVitals';
+render(
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ApolloProvider>,
+  document.getElementById('root')
+);
 
-const renderApp = () => {
-  render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-    document.getElementById('root')
-  );
-};
-
-// Render once
-renderApp();
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+register();

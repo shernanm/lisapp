@@ -1,0 +1,73 @@
+.upload-container {
+  position: relative;
+  width: 100%;
+}
+
+.upload-container,
+.upload-label {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.upload-file {
+  height: 0;
+  position: relative;
+  transform: scale(0);
+  width: 0;
+}
+
+.upload-label {
+  border: 1px solid hsl(0,0%,80%);
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.container-preview {
+  height: 0;
+  margin: 0 10px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  &::after {
+    background-image: url('../../../../assets/no-camera.svg');
+    content: '';
+    display: block;
+    height: 60px;
+    left: 50%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+  }
+
+  &::before {
+    background-color: #CCC;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.image-preview {
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

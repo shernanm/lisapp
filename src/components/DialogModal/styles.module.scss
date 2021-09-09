@@ -1,0 +1,41 @@
+@import '../../scss/animations';
+
+.container {
+  background-color: #FFF;
+  border-radius: 10px;
+  @include scale-animation();
+  left: 50%;
+  position: absolue;
+  position: relative;
+  top: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  width: 300px;
+}
+
+.title {
+  color: black;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.exit,
+.cancel {
+  background-color: #FFF;
+  border-top: 1px solid #EEE;
+  box-shadow: none;
+  color: black;
+}
+
+.cancel:active,
+.cancel:hover {
+  background-color: #FFF;
+}
+
+.exit {
+  color: #2684FF;
+  &:active,
+  &:hover {
+    background-color: #FFF;
+  }
+}

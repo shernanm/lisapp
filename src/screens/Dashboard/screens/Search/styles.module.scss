@@ -1,0 +1,51 @@
+.input-search {
+  border-bottom: 1px solid #DDD;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0rem 1rem 10px 4rem;
+  width: 100%;
+}
+
+
+.container {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  height: 20px;
+  position: absolute;
+  stroke: black;
+  stroke-width: 1px;
+  top: 30%;
+  transform: translate(30px, -50%);
+  width: 20px;
+}
+
+
+.items-container {
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: 100%;
+  margin: 0rem 1rem 4rem 1rem;
+  overflow-y: auto;
+  width: calc(100% - 2rem);
+
+  & article:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.not-found {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+}
+
+.strong {
+  color: black;
+  font-weight: bold;
+}

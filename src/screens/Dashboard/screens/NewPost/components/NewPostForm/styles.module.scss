@@ -1,0 +1,22 @@
+.form {
+  margin: 0 10px;
+  position: relative;
+}
+
+.button-container {
+  bottom: -160px;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.button {
+  background-color: #2684FF;
+  &:disabled {
+    background-color: #EEE;
+    box-shadow: none;
+  }
+}

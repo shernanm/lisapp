@@ -19,24 +19,20 @@ const api = create({
   timeout: 15000
 });
 
-// If you need to add more monitors consider calling api.addMonitor from your component
-// eslint-disable-next-line no-unused-vars, prettier/prettier, @typescript-eslint/no-unused-vars
-export const apiSetup = (unauthorizedCallback, networkErrorCallback) => {
-  api.addMonitor((response) => {
+// eslint-disable-next-line no-unused-vars,
+export const apiSetup = dispatch => {
+  api.addMonitor(response => {
     if (response.status === STATUS_CODES.unauthorized) {
       /*
        * TODO: These callbacks should only be called if no other callback was asigned for the response.
-       * - i.e: unauthorizedCallback?.(response)
+       * - dispatch(alertActions.error(i18next.t('apiErrors:expired')));
        */
     }
   });
 
-  api.addMonitor((response) => {
+  api.addMonitor(response => {
     if (response.problem === 'NETWORK_ERROR') {
-      /*
-       * TODO: These callbacks should only be called if no other callback was asigned for the response.
-       * - i.e: networkErrorCallback?.(response)
-       */
+      // TODO: These callbacks should only be called if no other callback was asigned for the response.
     }
   });
 };
