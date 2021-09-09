@@ -21,8 +21,13 @@
 .container {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   padding: 1rem;
   width: 100vw;
+}
+
+.image {
+  width: -webkit-fill-available;
 }
