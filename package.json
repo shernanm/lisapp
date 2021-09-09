@@ -47,7 +47,9 @@
   "scripts": {
     "start": "rescripts start",
     "start-env": "node ./scripts/start.js",
-    "build": "node ./scripts/build.js",
+    "build": "rescripts build && npm run build-sw",
+    "clean-cra-sw": "rm -f build/precache-manifest.*.js && rm -f build/service-worker.js",
+    "build-sw": "node ./src/sw-build.js",
     "deploy": "node ./scripts/deploy.js",
     "ts-check": "tsc",
     "test": "rescripts test --env=jsdom --coverage --passWithNoTests --watchAll=false",
